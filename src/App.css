@@ -7,8 +7,34 @@
 }
 #main {
     margin-left: 250px;
+    height: 100vh;
 }
 
 #container {
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 8px; /* 스크롤바 너비 */
+    height: 8px; /* 수평 스크롤바의 높이 */
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* 트랙 배경색 */
+    border-radius: 4px; /* 트랙의 경계선 둥글기 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* 핸들 색상 */
+    border-radius: 4px; /* 핸들의 경계선 둥글기 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); /* 호버 시 핸들 색상 */
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.7); /* 클릭 시 핸들 색상 */
 }

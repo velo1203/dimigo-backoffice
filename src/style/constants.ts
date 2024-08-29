@@ -1,5 +1,6 @@
 const Color = {
     White: "#fefeff",
+    MidWhiteBorder: "#e6e7eb",
     MidWhite: "#F6F7FA",
     Grey: "#3D3F4A",
     MainGrey: "#555869", //color for normal text

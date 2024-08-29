@@ -6,6 +6,7 @@ import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import ToggleSwitch from "../../common/toggle";
 import { StyledStayLi, StyledStayUl } from "./Styledstaylist";
+import DropDown from "../../common/dropdown";
 
 function StayList() {
     return (
@@ -17,11 +18,16 @@ function StayList() {
                     <FontAwesomeIcon icon={faPlusCircle} />
                 </Button>
             </div>
-            <div className="main">
-                <StyledStayUl>
-                    <Stay />
-                </StyledStayUl>
-            </div>
+            <StyledStayUl>
+                <Stay />
+                <Stay />
+
+                <Stay />
+                <Stay />
+                <Stay />
+                <Stay />
+                <Stay />
+            </StyledStayUl>
         </StyledSection>
     );
 }
@@ -36,6 +42,7 @@ function Stay() {
         <StyledStayLi>
             <ToggleSwitch enabled={enabled} onToggle={handleToggle} />
             <p>2024-08-31~2024-09-01</p>
+            <DropDown />
         </StyledStayLi>
     );
 }
