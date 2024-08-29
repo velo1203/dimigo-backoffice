@@ -5,9 +5,6 @@ function Stay() {
     return (
         <StyledStay>
             <StayList />
-            <StayList />
-            <StayList />
-            <StayList />
         </StyledStay>
     );
 }

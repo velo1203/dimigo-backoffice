@@ -1,11 +1,42 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Color } from "../../../style/constants";
+import { Button } from "../../common/button";
 import { StyledSection } from "../../section/styledsection";
+import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import ToggleSwitch from "../../common/toggle";
+import { StyledStayLi, StyledStayUl } from "./Styledstaylist";
 
 function StayList() {
     return (
         <StyledSection>
-            <h1>Stay List</h1>
+            <div className="title">
+                <h1>잔류 목록</h1>
+                <Button color={Color.MainPoint} textColor={Color.White}>
+                    <p>잔류 추가</p>
+                    <FontAwesomeIcon icon={faPlusCircle} />
+                </Button>
+            </div>
+            <div className="main">
+                <StyledStayUl>
+                    <Stay />
+                </StyledStayUl>
+            </div>
         </StyledSection>
     );
 }
 
+function Stay() {
+    const [enabled, setEnabled] = useState(false);
+    const handleToggle = () => {
+        setEnabled(!enabled);
+    };
+
+    return (
+        <StyledStayLi>
+            <ToggleSwitch enabled={enabled} onToggle={handleToggle} />
+            <p>2024-08-31~2024-09-01</p>
+        </StyledStayLi>
+    );
+}
 export default StayList;

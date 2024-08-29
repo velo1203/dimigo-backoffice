@@ -7,7 +7,9 @@ export const StyledSidebar = styled.div`
     display: flex;
     flex-direction: column;
     height: 100vh;
-
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: ${Color.White};
     .header {
         img {
@@ -77,13 +79,14 @@ export const StyledSidebarMenu = styled.li<{ active: boolean }>`
     color: ${Color.MainGrey};
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s;
     display: flex;
     align-items: center;
     gap: 10px;
 
     &:hover {
         background-color: ${Color.LightGrey};
+        transform: scale(1.02);
     }
     ${(props) =>
         props.active &&
@@ -95,4 +98,7 @@ export const StyledSidebarMenu = styled.li<{ active: boolean }>`
         opacity: 0.7;
         }
     `}
+    &:active {
+        transform: scale(1);
+    }
 `;
