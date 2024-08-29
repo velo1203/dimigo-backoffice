@@ -7,9 +7,7 @@ export const StyledSidebar = styled.div`
     display: flex;
     flex-direction: column;
     height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
+
     background-color: ${Color.White};
     .header {
         img {

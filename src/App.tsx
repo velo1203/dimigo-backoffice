@@ -1,16 +1,18 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import MainPage from "./pages/main";
+
 import Sidebar from "./components/sidebar/sidebar";
+import Stay from "./pages/stay/stay";
 
 function App() {
     return (
-        <>
+        <div id="main">
             <Sidebar />
+
             <Routes>
-                <Route path="/" element={<MainPage />} />
+                <Route path="/" element={<Stay />} />
             </Routes>
-        </>
+        </div>
     );
 }
 
